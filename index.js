@@ -4,6 +4,7 @@ import { FlatList, Keyboard, Text, TextInput, TouchableOpacity, View, ViewPropTy
 import normalize from './utility/NormalizedText';
 import { hp, wp } from './utility/ResponsiveScreen';
 import Utils from './utility/Utils';
+import { Sae, Fumi, Hoshi } from 'react-native-textinput-effects';
 
 function styleByListSize(list) {
     const length = list.length;
@@ -103,9 +104,17 @@ export default class SearchableDropDown extends Component {
     render() {
         return (
             <View style={searchableDropDownStyle.container}>
-                <TextInput
+                <Hoshi
                     underlineColorAndroid={this.props.underlineColorAndroid}
-                    maxLength={30}
+                    // label={i18nText || text}
+                    // labelStyle={labelStyle}
+                    // inputStyle={inputStyle}
+                    inputPadding={30}
+                    labelHeight={24}
+                    borderHeight={2}
+                    // TextInput props
+                    autoCapitalize={autoCapitalize || false}
+                    autoCorrect={autoCorrect || false}
                     onFocus={() =>
                         this.setState({ focus: true })
                     }
@@ -120,7 +129,7 @@ export default class SearchableDropDown extends Component {
                     style={searchableDropDownStyle.input}
                     placeholderTextColor={this.props.placeholderTextColor}
                     placeholder={this.props.placeholder}
-                />
+                    />
                 {this.renderFlatList()}
             </View>
         );

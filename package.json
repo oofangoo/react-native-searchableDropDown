@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/KianooshSoleimani/react-native-searchableDropDown/issues"
   },
-  "homepage": "https://github.com/KianooshSoleimani/react-native-searchableDropDown#readme"
+  "homepage": "https://github.com/KianooshSoleimani/react-native-searchableDropDown#readme",
+  "dependencies": {
+    "react-native-textinput-effects": "^0.5.1"
+  }
 }

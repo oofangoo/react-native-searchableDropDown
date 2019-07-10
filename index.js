@@ -113,8 +113,6 @@ export default class SearchableDropDown extends Component {
                     labelHeight={24}
                     borderHeight={2}
                     // TextInput props
-                    autoCapitalize={autoCapitalize || false}
-                    autoCorrect={autoCorrect || false}
                     onFocus={() =>
                         this.setState({ focus: true })
                     }
